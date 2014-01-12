@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+   <meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+	
+	<script src="~/Scripts/lib/require/require.js"></script>
+	<script src="~/Scripts/config.js"></script>
+	
+	<link href="~/Content/Style.css" rel="stylesheet" />
+	<script>
+		require.config({
+			baseUrl: '@Url.Content("~/scripts/lib/")'
+		});
+	</script>
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

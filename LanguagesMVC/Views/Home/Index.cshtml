@@ -1,0 +1,27 @@
+﻿@model LanguagesBLL.Models.HomeViewModel
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+@Html.DropDownListFor(m => m.Types, null, Model.Types)
+@for (int index = 0; index < Model.Levels.Count; index++)
+{
+	@Html.CheckBoxFor(m => m.Levels[index].Selected);
+	@Html.LabelFor(m => m.Levels[index].Selected, "Level " + Model.Levels[index].Value)
+}
+<br/><br/>
+<div id="fromBox" class="box"><span id="from">&nbsp;</span><span class="small" id="fromDescription"></span></div>
+<div id="toBox" class="box"><span id="to">&nbsp;</span><span class="small" id="toDescription"></span></div>
+<div class="nav">
+	<div class="btn back">Back</div>
+	<div class="btn next">Next</div>
+</div>
+<script>
+	var words = @Html.Raw(Model.WordsJSON);
+	
+	require(['../custom/scripts'], function (util) {
+		var languages = new Languages(document.body, {words: words});
+	});
+
+</script>

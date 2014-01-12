@@ -1,0 +1,38 @@
+﻿body {
+			font-family: Arial;
+			font-size: 18px;
+		}
+		.box {
+			width: 300px;
+			display: block;
+			border: solid 1px gray;
+			margin: 0 10px 10px 0px;
+			float: left;
+			height: 130px;
+			overflow: auto;
+		}
+		.box span {
+			margin: 10px;
+			display: block;
+		}
+
+		.box span.small {
+			font-size: 14px;
+		}
+		.nav {
+			width: 300px;
+			float: left;
+			clear: both;
+		}
+		.btn {
+			background-color: #eee;
+			float: left;
+			padding: 20px 40px 20px 40px;
+			cursor: pointer;
+		}
+		.btn.back {
+			float: left;
+		}
+		.btn.next {
+			float: right;
+		}
